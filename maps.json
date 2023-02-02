@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Astrub",
+        "picture" : "astrub",
+        "description": "Aucunes modifications de dommages",
+        "type" : "neutre",
+        "bonus" : 0
+    },
+    {
+        "id": 2,
+        "name": "Moon",
+        "picture" : "moon",
+        "description": "Les dommages des attaques de type air sont augmenté de 10%",
+        "type" : "air",
+        "bonus" : 10
+    },
+    {
+        "id": 3,
+        "name": "Sidimote",
+        "picture" : "sidimote",
+        "description": "Les dommages des attaques de type feu sont augmenté de 10%",
+        "type" : "feu",
+        "bonus" : 10
+    },
+    {
+        "id": 4,
+        "name": "Saharach",
+        "picture" : "saharach",
+        "description": "Les dommages des attaques de type terre sont augmenté de 10%",
+        "type" : "terre",
+        "bonus" : 10
+    },
+    {
+        "id": 5,
+        "name": "Frigost",
+        "picture" : "frigost",
+        "description": "Les dommages des attaques de type eau sont augmenté de 10%",
+        "type" : "eau",
+        "bonus" : 10
+    }
+]

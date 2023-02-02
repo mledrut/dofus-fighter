@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "name": "Iop",
+        "picture" : "iop",
+        "puissance": 76,
+        "attacks" : [
+            {
+                "name": "Pression",
+                "type": "terre",
+                "damage": 90,
+                "id" : 141
+            },
+            {
+                "name": "Colère de Iop",
+                "type": "terre",
+                "damage": 10,
+                "id": 159
+            }
+        ],
+        "type": "ange"
+    },
+    {
+        "id": 2,
+        "name": "Crâ",
+        "picture": "cra",
+        "puissance": 94,
+        "attacks" : [
+            {
+                "name": "Flèche Magique",
+                "type": "air",
+                "damage": 25,
+                "id": 161
+            },
+            {
+                "name": "Flèche Explosive",
+                "type": "feu",
+                "damage": 35,
+                "id": 179
+            }
+        ],
+        "type": "demon"
+    },
+    {
+        "id": 3,
+        "name": "Osamodas",
+        "picture": "osamodas",
+        "puissance": 67,
+        "attacks" : [
+            {
+                "name": "Corbeau Embrasé",
+                "type": "feu",
+                "damage": 25,
+                "id": 4026
+            },
+            {
+                "name": "Frappe du Craqueleur",
+                "type": "terre",
+                "damage": 35,
+                "id": 36
+            }
+        ],
+        "type": "demon"
+    },
+    {
+        "id": 4,
+        "name": "Eniripsa",
+        "picture": "eniripsa",
+        "puissance": 67,
+        "attacks" : [
+            {
+                "name": "Mot Alternatif",
+                "type": "feu",
+                "damage": 25,
+                "id": 124
+            },
+            {
+                "name": "Mot Fracassant",
+                "type": "eau",
+                "damage": 35,
+                "id": 121
+            }
+        ],
+        "type": "ange"
+    },
+    {
+        "id": 5,
+        "name": "Sadida",
+        "picture": "sadida",
+        "puissance": 67,
+        "attacks" : [
+            {
+                "name": "Ronces Agressives",
+                "type": "terre",
+                "damage": 25,
+                "id": 194
+            },
+            {
+                "name": "Tremblement",
+                "type": "feu",
+                "damage": 35,
+                "id": 181
+            }
+        ],
+        "type": "demon"
+    },
+    {
+        "id": 6,
+        "name": "Ecaflip",
+        "picture": "ecaflip",
+        "puissance": 67,
+        "attacks" : [
+            {
+                "name": "Pile ou Face",
+                "type": "terre",
+                "damage": 25,
+                "id": 102
+            },
+            {
+                "name": "Langue Râpeuse",
+                "type": "feu",
+                "damage": 35,
+                "id": 116
+            }
+        ],
+        "type": "demon"
+    },
+    {
+        "id": 7,
+        "name": "Enutrof",
+        "picture": "enutrof",
+        "puissance": 67,
+        "attacks" : [
+            {
+                "name": "Lancer de Pièces",
+                "type": "eau",
+                "damage": 25,
+                "id": 51
+            },
+            {
+                "name": "Force de l'Âge",
+                "type": "terre",
+                "damage": 35,
+                "id": 53
+            }
+        ],
+        "type": "ange"
+    },
+    {
+        "id": 8,
+        "name": "Feca",
+        "picture": "feca",
+        "puissance": 67,
+        "attacks" : [
+            {
+                "name": "Attaque Nuageuse",
+                "type": "eau",
+                "damage": 25,
+                "id": 9
+            },
+            {
+                "name": "Glyphe Agressif",
+                "type": "air",
+                "damage": 35,
+                "id": 17
+            }
+        ],
+        "type": "ange"
+    }
+]

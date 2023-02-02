@@ -1,0 +1,236 @@
+.fight{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.bg-carte{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(2px);
+        transform: scale(1.05);
+    }
+}
+
+
+
+.fight-zone{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+
+    .fight-column {
+        width: calc((100% - 40px) / 3);
+
+
+        .perso-box{
+
+            position: relative;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            text-shadow: #000 1px 0 10px;
+            box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.5);
+    
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .infos{
+                position: absolute;
+                background-color: rgba(0,0,0,.6);
+                color: #fff;
+                width: calc(100% - 40px);
+                bottom: 0;
+                padding: 20px;
+
+                .life{
+                    width: 100%;
+                    background: #3a3932;
+                    box-shadow: inset 0 0 10px #000000;
+                    position: relative;
+                    height: 44px;
+                    border-radius: 10px;
+                    overflow: hidden;
+
+                    .progress-bar{
+                        background: #bfcb16;
+                        box-shadow: inset 0 0 5px #000;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        span{
+                            position: absolute;
+                            line-height: 44px;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            text-shadow: 0 0 2px #333;
+                            font-family: 'Bebas Neue', cursive;
+                            font-size: 30px;
+                            text-align: center;
+
+                        }
+                    }
+                }
+                .life.enemy{
+
+                    .progress-bar{
+                        background: #dc7200;
+                    }
+                }
+            }
+        }
+
+        .sorts{
+
+            background-color: rgba(165, 162, 136, 0.8);
+            padding: 14px;
+            border-radius: 20px;
+            margin-top: 20px;
+            width: 100%;
+            list-style: none;
+            width: calc(100% - 28px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+            
+    
+                a, .enemy-sort{
+                    display: flex;
+                    width: calc(100% - 14px);
+                    height: 50px;
+                    padding: 6px;
+                    border-radius: 16px;
+                    height: 50px;
+                    gap: 10px;
+                    color: inherit;
+                    text-decoration: none;                      
+                    
+                    img{
+                        width: 50px;
+                        aspect-ratio: 1/1;
+                    }
+                    .sort-details{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        p{
+                            margin: 0;
+                            font-size: 20px;
+                            font-family: 'Bebas Neue', cursive;
+    
+                        }
+                        span{
+                            font-size: 14px;
+                            opacity: 0.6;
+                        }
+                    }
+    
+                        
+                    
+                    &:hover{
+                        background-color: rgba(191, 203, 22, 0.5);
+                        cursor: pointer;
+                    }
+    
+                }
+
+            
+        }
+
+        .sorts.enemy{
+            opacity: 0.8;
+            background-color: rgba(35, 35, 35, 0.8);
+            .enemy-sort{
+
+                &:hover{
+                    cursor: default;
+                    background-color: unset;
+                }
+            }
+            
+        }
+    }
+   
+}
+
+.var{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    align-items: stretch;
+    
+    .infos-combat{
+        background-color: rgba(165, 162, 136, 0.8);
+        padding: 20px;
+        border-radius: 20px;
+
+        h3{
+            margin: 0;
+            font-family: 'Bebas Neue', cursive;
+            text-align: center;
+            font-size: 34px;
+        }
+        p{
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+        h5{
+            margin: 0;
+            margin-top: 10px;
+            font-size: 24px;
+            font-family: 'Bebas Neue', cursive;
+            text-align: center;
+        }
+    }
+
+    .historique{
+        background-color: rgba(165, 162, 136, 0.8);
+        height: 60%;
+        border-radius: 20px;
+        padding: 20px;
+
+        ul{
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 0;
+            li{
+                p{
+                    margin: 0;
+                    font-size: 13px;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    .middle-footer{
+        display: flex;
+        justify-content: center;
+        a{
+            background-color: #dc7200;
+            color: #fff;
+            padding: 14px 24px;
+        }
+    }
+}

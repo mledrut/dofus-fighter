@@ -1,0 +1,376 @@
+.fight {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.bg-carte {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  overflow: hidden;
+}
+.bg-carte img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  transform: scale(1.05);
+}
+
+.fight-zone {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.fight-zone .fight-column {
+  width: calc((100% - 40px) / 3);
+}
+.fight-zone .fight-column .perso-box {
+  position: relative;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-shadow: #000 1px 0 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.fight-zone .fight-column .perso-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fight-zone .fight-column .perso-box .infos {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: calc(100% - 40px);
+  bottom: 0;
+  padding: 20px;
+}
+.fight-zone .fight-column .perso-box .infos .life {
+  width: 100%;
+  background: #3a3932;
+  box-shadow: inset 0 0 10px #000000;
+  position: relative;
+  height: 44px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.fight-zone .fight-column .perso-box .infos .life .progress-bar {
+  background: #bfcb16;
+  box-shadow: inset 0 0 5px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.fight-zone .fight-column .perso-box .infos .life .progress-bar span {
+  position: absolute;
+  line-height: 44px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-shadow: 0 0 2px #333;
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  text-align: center;
+}
+.fight-zone .fight-column .perso-box .infos .life.enemy .progress-bar {
+  background: #dc7200;
+}
+.fight-zone .fight-column .sorts {
+  background-color: rgba(165, 162, 136, 0.8);
+  padding: 14px;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 100%;
+  list-style: none;
+  width: calc(100% - 28px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.fight-zone .fight-column .sorts a, .fight-zone .fight-column .sorts .enemy-sort {
+  display: flex;
+  width: calc(100% - 14px);
+  height: 50px;
+  padding: 6px;
+  border-radius: 16px;
+  height: 50px;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+.fight-zone .fight-column .sorts a img, .fight-zone .fight-column .sorts .enemy-sort img {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.fight-zone .fight-column .sorts a .sort-details, .fight-zone .fight-column .sorts .enemy-sort .sort-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fight-zone .fight-column .sorts a .sort-details p, .fight-zone .fight-column .sorts .enemy-sort .sort-details p {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+}
+.fight-zone .fight-column .sorts a .sort-details span, .fight-zone .fight-column .sorts .enemy-sort .sort-details span {
+  font-size: 14px;
+  opacity: 0.6;
+}
+.fight-zone .fight-column .sorts a:hover, .fight-zone .fight-column .sorts .enemy-sort:hover {
+  background-color: rgba(191, 203, 22, 0.5);
+  cursor: pointer;
+}
+.fight-zone .fight-column .sorts.enemy {
+  opacity: 0.8;
+  background-color: rgba(35, 35, 35, 0.8);
+}
+.fight-zone .fight-column .sorts.enemy .enemy-sort:hover {
+  cursor: default;
+  background-color: unset;
+}
+
+.var {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  align-items: stretch;
+}
+.var .infos-combat {
+  background-color: rgba(165, 162, 136, 0.8);
+  padding: 20px;
+  border-radius: 20px;
+}
+.var .infos-combat h3 {
+  margin: 0;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  font-size: 34px;
+}
+.var .infos-combat p {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.6;
+}
+.var .infos-combat h5 {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 24px;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+}
+.var .historique {
+  background-color: rgba(165, 162, 136, 0.8);
+  height: 60%;
+  border-radius: 20px;
+  padding: 20px;
+}
+.var .historique ul {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+.var .historique ul li p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.6;
+}
+.var .middle-footer {
+  display: flex;
+  justify-content: center;
+}
+.var .middle-footer a {
+  background-color: #dc7200;
+  color: #fff;
+  padding: 14px 24px;
+}
+
+body {
+  margin: 0;
+  background-image: url("../img/login.jpg");
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+.container h2 {
+  font-family: "Bebas Neue", cursive;
+  margin: 0;
+  color: #aab700;
+  text-shadow: #000 1px 0 10px;
+  text-align: center;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+}
+.select ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 20px;
+}
+.select ul li {
+  width: calc((100% - 20px) / 4);
+  aspect-ratio: 4/4;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  gap: 10px;
+}
+.select ul li img {
+  width: 100%;
+}
+.select ul li .infos {
+  position: absolute;
+  top: 75%;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: calc(100% - 20px);
+  color: #FFF;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  backdrop-filter: blur(5px);
+  padding: 0 10px;
+}
+.select ul li .infos .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 25%;
+}
+.select ul li .infos .card-header img {
+  height: 50%;
+  width: auto;
+  object-fit: contain;
+}
+.select ul li .infos .card-header h3 {
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+}
+.select ul li .infos .sorts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  height: 75%;
+  justify-content: center;
+}
+.select ul li .infos .sorts li {
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+.select ul li .infos .sorts li img {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.select ul li .infos .sorts li .sort-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.select ul li .infos .sorts li .sort-details p {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+}
+.select ul li .infos .sorts li .sort-details span {
+  font-size: 14px;
+  opacity: 0.6;
+}
+.select ul li:hover {
+  cursor: pointer;
+}
+.select ul li:hover .infos {
+  top: 0;
+}
+
+.cartes {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  gap: 20px;
+}
+.cartes li {
+  width: calc((100% - 80px) / 5);
+}
+.cartes li .carte-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 100px;
+}
+.cartes li .carte-box:hover {
+  cursor: pointer;
+}
+.cartes li .carte-box:hover .infos {
+  top: 0;
+}
+.cartes li .carte-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cartes li .carte-box .infos {
+  position: absolute;
+  top: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+.cartes li .carte-box .infos p {
+  text-align: center;
+  color: #FFF;
+  margin: 0;
+}
+.cartes li h4 {
+  font-family: "Bebas Neue", cursive;
+  color: #FFF;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  text-shadow: #000 1px 0 10px;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+}
+.cta a {
+  background: linear-gradient(to bottom, #f7e199 1%, #f9db77 7%, #fac612 14%, #f19e12 41%, #f19e12 52%, #f19e12 88%, #fac612 99%);
+  color: #fff;
+  border-color: #1b6d85;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 12px 24px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 36px;
+}
+
+/*# sourceMappingURL=main.css.map */
